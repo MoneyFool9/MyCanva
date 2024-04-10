@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1712345329833') format('truetype');
+  src: url('iconfont.ttf?t=1712710833277') format('truetype');
 }
 
 .iconfont {
@@ -33,6 +33,14 @@
 
 .icon-xialajiantou1:before {
   content: "\e60f";
+}
+
+.icon-arrow-left-bold:before {
+  content: "\e685";
+}
+
+.icon-arrow-right-bold:before {
+  content: "\e687";
 }
 
 .icon-xialajiantou2:before {

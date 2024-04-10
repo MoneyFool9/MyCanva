@@ -34,6 +34,7 @@ nav {
 }
 /* 左侧下拉栏开始 */
 .nav-list {
+    z-index: 5;
     display: none;
     opacity: 0;
     height: 400px;
@@ -121,10 +122,52 @@ nav {
     color: #fff;
 }
 .slide {
+    margin: 20px auto;
+    overflow: hidden;
     margin-top: 20px;
-    max-width: 1464px;
-    height: 250px;
-    border: 1px solid red;
+    max-width: 1200px;
+    height: 320px;
+    position: relative;
+}
+.slide ul {
+    position: absolute;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    margin-top: -130px;
+    left: -50%;
+    margin-left: -100px;
+}
+.slide img{
+    border-radius: 12px;
+    width: 186px;
+    height: auto;
+    transition: all .3s;
+}
+.slide img:hover {
+    transform: scale(1.1);
+}
+.arrow {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+    position: absolute;
+    border: 1px solid rgba(156, 156, 156, 0.557);
+}
+.arrow-l {
+    top: 50%;
+    margin-top: -25px;
+    left: 20px; 
+}
+.arrow-r {
+    top: 50%;
+    margin-top: -25px;
+    right: 20px;
 }
 /* 头部内容样式结束 */
 /* 主体内容样式开始 */
@@ -255,10 +298,25 @@ article {
     margin-top: 50px;
 }
 .flow{
-    border: 1px solid red;
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid red; */
     height: 100px;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box;
+}
+.flow ul{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 120px;
+}
+.flow img {
+    width: 100px;
+    height: auto;
 }
 .section3-bottom {
     margin-top: 30px;
@@ -296,7 +354,10 @@ article {
     cursor: pointer;
 }
 .nav2-wrap {
+    width: 100%;
+    max-width: 2432px;
     height: 120px;
+    margin: 0 auto;
 }
 .nav {
     margin-top: 100px;
@@ -326,10 +387,13 @@ article {
     padding-top: 30px;
     box-sizing: border-box;
     margin: 0 auto;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     height: 700px;
     /* border: 1px solid red; */
 }
+
+
 .grid-list div>img {
     border-radius: 12px;
     border: 1px solid rgb(159, 157, 157);
@@ -456,6 +520,8 @@ article {
     width: 180px;
     height: auto;
 }
+
+
 .section5 h2 {
     margin-top: 50px;
 }
@@ -504,9 +570,11 @@ footer {
     margin-top: 200px;
 }
 .footer-wrap {
+    width: 100%;
+    max-width: 2560px;
     justify-content: space-between;
     display: flex;
-    margin-top: 66px;
+    margin: 66px auto 0;
 }
 .footer-wrap ul li{
     margin-top: 12px;
@@ -521,7 +589,9 @@ footer {
     font-weight: 600;
 }
 .footer-root {
-    margin-top: 66px;
+    width: 100%;
+    max-width: 2560px;
+    margin: 66px auto 0;
 }
 .footer-root>div {
     padding: 24px 0;
